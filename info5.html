@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>村屋防水與窗台滲漏專家 | 紅外線漏水檢測、天台窗台專項防漏 | 永盛工程行</title>
+  <meta name="keywords" content="村屋防水, 窗台漏水, 窗台防水, 紅外線漏水檢測, 色水測試, 香港防水公司, 防水工程, 漏水維修, 村屋天台漏水">
+  <meta name="description" content="村屋漏水問題難根治？永盛工程行提供專業村屋防水方案。針對天台、窗台及地台滲漏，結合紅外線檢測與科學色水測試，為您精準定位源頭。香港防水公司推薦，提供十年長效保修！">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* 全站統一 UI 規範 */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #ffffff; color: #1e2b3c; line-height: 1.6; }
+    .container { max-width: 1400px; margin: 0 auto; padding: 0 40px; }
+    
+    :root {
+      --primary-blue: #0066b3;
+      --deep-blue: #002b5c;
+      --accent-yellow: #FFCC1A;
+      --text-main: #1e2b3c;
+      --text-sub: #5a6e85;
+      --bg-alt: #f7f9fc;
+    }
+
+    /* 導航樣式 (保持與 index 一致) */
+    .navbar { background: #ffffff; padding: 20px 0; border-bottom: 1px solid #eaeef2; position: sticky; top: 0; z-index: 100; }
+    .navbar .container { display: flex; align-items: center; justify-content: space-between; }
+    .logo a { display: flex; align-items: center; font-size: 1.8rem; font-weight: 700; color: var(--text-main); text-decoration: none; }
+    .logo img { height: 52px; margin-right: 12px; }
+    .nav-menu { display: flex; gap: 40px; align-items: center; }
+    .nav-menu a { color: #2c3e50; font-weight: 500; text-decoration: none; transition: 0.2s; }
+    .nav-menu a:hover { color: var(--primary-blue); }
+    
+    /* 下拉選單 */
+    .dropdown { position: relative; }
+    .dropdown-content { display: none; position: absolute; top: 100%; left: 0; background: white; box-shadow: 0 20px 40px rgba(0,0,0,0.05); min-width: 220px; border-radius: 12px; padding: 12px 0; z-index: 10; }
+    .dropdown:hover .dropdown-content { display: block; }
+    .dropdown-content a { display: block; padding: 12px 24px; font-size: 0.95rem; color: var(--text-main); }
+    .dropdown-content a:hover { background: var(--bg-alt); color: var(--primary-blue); }
+
+    /* 通用組件 */
+    .section { padding: 100px 0; }
+    .section-title { font-size: 3.2rem; font-weight: 700; color: var(--text-main); margin-bottom: 24px; line-height: 1.2; letter-spacing: -0.02em; }
+    .section-subtitle { font-size: 1.25rem; color: var(--text-sub); max-width: 800px; margin: 0 auto 60px; }
+    .text-center { text-align: center; }
+    
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+    
+    .btn { display: inline-block; padding: 18px 44px; border-radius: 50px; font-weight: 600; font-size: 1.1rem; text-decoration: none; transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: none; cursor: pointer; }
+    .btn-primary { background: var(--primary-blue); color: white; box-shadow: 0 10px 20px rgba(0,102,179,0.15); }
+    .btn-primary:hover { background: var(--deep-blue); transform: translateY(-3px); box-shadow: 0 15px 30px rgba(0,102,179,0.25); }
+    
+    .tech-card { background: white; border-radius: 32px; padding: 48px; box-shadow: 0 20px 50px rgba(0,0,0,0.04); margin-bottom: 30px; border-top: 6px solid var(--primary-blue); transition: 0.4s; }
+    .tech-card:hover { transform: translateY(-10px); box-shadow: 0 30px 60px rgba(0,0,0,0.08); }
+    .tech-card h3 { color: var(--primary-blue); margin-bottom: 20px; font-size: 1.6rem; }
+
+    /* 頁腳樣式 */
+    .footer { background: #0f1a2a; color: #cbd5e1; padding: 100px 0 40px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 60px; }
+    .footer-logo { font-size: 2rem; font-weight: 700; color: white; margin-bottom: 25px; }
+    .footer-col h4 { color: white; margin-bottom: 30px; font-size: 1.3rem; font-weight: 600; }
+    .footer-col p, .footer-col a { color: #9aa9b9; text-decoration: none; line-height: 2; font-size: 1.05rem; }
+    .footer-col a:hover { color: white; }
+    .footer-bottom { border-top: 1px solid #253040; padding-top: 40px; margin-top: 60px; text-align: center; color: #6a7c94; }
+
+    /* 響應式 */
+    @media (max-width: 1200px) {
+      .grid-2 { gap: 40px; }
+      .section-title { font-size: 2.8rem; }
+    }
+    @media (max-width: 992px) {
+      .container { padding: 0 24px; }
+      .grid-2, .grid-3 { grid-template-columns: 1fr; gap: 40px; }
+      .section { padding: 80px 0; }
+      .section-title { font-size: 2.4rem; }
+      .navbar .container { padding: 0 20px; }
+      .nav-menu { display: none; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .footer-col:first-child { grid-column: span 2; }
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <section class="section" style="background: #f7f9fc;">
+    <div class="container">
+      <h1 class="section-title">村屋防水與漏水檢測技術</h1>
+      <p class="section-subtitle">針對村屋結構特點，結合精密儀器與豐富經驗，根治每一處滲漏。</p>
+      
+      <div class="grid-2">
+        <div>
+          <h2 style="font-size: 2rem; margin-bottom: 20px;">村屋漏水的常見成因</h2>
+          <p style="font-size: 1.1rem; line-height: 1.8;">村屋結構通常較為分散，防水工程的關鍵在於整體防護。常見的滲漏位置包括：</p>
+          <ul style="margin-top: 15px; line-height: 2; padding-left: 20px;">
+            <li><strong>天台及窗台漏水：</strong>長期日曬雨淋導致防水膠老化。</li>
+            <li><strong>外牆滲漏：</strong>村屋外牆容易出現細微裂縫。</li>
+            <li><strong>地台及浴室：</strong>防水層失效導致滲漏至樓下或牆身。</li>
+            <li><strong>管道老化：</strong>入牆喉管滲漏，難以用肉眼發現。</li>
+          </ul>
+        </div>
+        <div>
+          <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800" alt="村屋防水工程 - 紅外線漏水檢測專業技術展示" style="width: 100%; border-radius: 24px;">
+        </div>
+      </div>
+
+      <h2 class="section-title" style="margin-top: 60px;">專業漏水檢測技術</h2>
+      <div class="grid-2">
+        <div class="tech-card">
+          <h3><i class="fas fa-camera"></i> 紅外線熱成像檢測</h3>
+          <p>利用高靈敏度紅外線相機，偵測牆體內部的溫度差異。由於漏水處通常溫度較低，熱成像儀能精確繪製出隱藏在牆體內的滲漏路徑，無需大面積拆除即可定位源頭。</p>
+        </div>
+        <div class="tech-card">
+          <h3><i class="fas fa-flask"></i> 色水與螢光劑測試</h3>
+          <p>將專用的色水或螢光劑注入疑似滲漏的管道 or 區域。配合紫外線燈照射，能準確判斷滲漏水是否來自特定水源，是檢測浴室及窗台漏水的經典且有效的方法。</p>
+        </div>
+      </div>
+
+      <!-- 新增：村屋窗台與露台專題 -->
+      <h2 class="section-title" style="margin-top: 60px;">村屋窗台及露台防水重點</h2>
+      <div class="grid-2">
+        <div>
+          <img src="https://images.unsplash.com/photo-1584622781564-1d9876a13d00?w=800" alt="村屋窗台防水工程 - 專業防漏處理" style="width: 100%; border-radius: 24px;">
+        </div>
+        <div>
+          <h3 style="color: var(--primary-blue); margin-bottom: 15px;">窗台漏水的成因與對策</h3>
+          <p style="margin-bottom: 20px;">村屋的窗台通常暴露在強風暴雨中，窗框與牆身之間的防水膠容易硬化收縮。永盛的專業方案：</p>
+          <ul style="padding-left: 20px; line-height: 2;">
+            <li><strong>徹底移除舊膠：</strong>不只是覆蓋，而是完全清除老化的舊防水膠。</li>
+            <li><strong>注入高效防水密封劑：</strong>選用具備極高彈性與耐氣候性的專業密封材料。</li>
+            <li><strong>外牆透明防水層：</strong>在窗框周圍噴塗透明防水膜，增加額外保護。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="margin-top: 60px; text-align: center;">
+        <h2 style="margin-bottom: 20px;">村屋滲水影響生活品質？</h2>
+        <a href="https://api.whatsapp.com/send?phone=85298568540" class="btn btn-primary">預約紅外線檢測服務</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 深度 SEO 文章區塊 -->
+  <section class="section" style="background: #ffffff; line-height: 1.8; border-top: 1px solid #edf2f7;">
+    <div class="container">
+      <h2 class="section-title">村屋防水與窗台滲漏專家指南：針對香港村屋結構的防漏工程全解析</h2>
+      <div style="color: #4a5568; font-size: 1.1rem;">
+        <p style="margin-bottom: 20px;">村屋作為香港極具特色的居住形式，其結構與一般大廈有顯著不同，因此在面臨滲漏問題時，所需的<strong>防水工程</strong>技術也更具針對性。不論是<strong>村屋天台漏水</strong>、<strong>窗台滲水</strong>還是<strong>地台漏水</strong>，都需要專業的<strong>香港防水公司</strong>進行精準判斷。本文將為村屋業主深度解析村屋防水的核心要點。</p>
+        
+        <h3 style="color: var(--primary-blue); margin: 30px 0 15px;">1. 為什麼村屋更容易發生滲漏問題？</h3>
+        <p style="margin-bottom: 15px;">村屋多為獨立建築，四周缺乏遮擋，直接暴露在強風暴雨與烈日曝曬下。
+        - **熱脹冷縮強烈**：屋頂與外牆受溫差影響大，容易產生結構性裂縫。
+        - **防水層老化快**：舊式村屋往往缺乏系統性的<strong>屋頂防水</strong>規劃，使用的材料（如傳統瀝青）耐候性較差。
+        - **改建與加裝**：許多村屋加裝了太陽能板、熱水爐或頂層屋宇，這些安裝孔位若處理不當，便是<strong>天花漏水</strong>的元兇。</p>
+        
+        <h3 style="color: var(--primary-blue); margin: 30px 0 15px;">2. 村屋天台防水：起底重做是唯一根治之道</h3>
+        <p style="margin-bottom: 15px;">面對<strong>天台漏水</strong>，許多業主嘗試局部塗抹防水膠，但往往效果不彰。專業的<strong>防漏工程</strong>建議採取「徹底剷除、重新起底」的方案。
+        - **工序重點**：清理至堅實混凝土層，針對結構裂縫進行<strong>打針防水</strong>加固，再鋪設具備高彈性的多層防水膜。
+        - **排水優化**：村屋天台排水口（落水口）數量往往不足，增加排水效能是防止積水滲透的關鍵。</p>
+        
+        <h3 style="color: var(--primary-blue); margin: 30px 0 15px;">3. 窗台防水與外牆修補：應對颱風天的挑戰</h3>
+        <p style="margin-bottom: 15px;"><strong>窗台漏水</strong>是村屋住戶最常見的煩惱。由於村屋外牆磁磚容易龜裂，雨水在風壓作用下會從窗框縫隙或磁磚裂縫壓入室內。
+        - **專業方案**：專業的<strong>防水師傅</strong>會清除老化的填縫膠，重新注入高效能密封劑，並在窗框周圍噴塗透明隱形防水膜，形成全方位防護。這類<strong>漏水維修</strong>雖然範疇小，但技術要求極高。</p>
+        
+        <h3 style="color: var(--primary-blue); margin: 30px 0 15px;">4. 科學檢測：紅外線漏水檢測在村屋的應用</h3>
+        <p style="margin-bottom: 15px;">由於村屋結構複雜，水源往往難以捕捉。永盛工程行引入<strong>紅外線漏水檢測</strong>及<strong>色水測試</strong>。透過熱成像儀，我們能快速掃描整棟村屋的外牆與頂層，定位隱藏的滲漏路徑。科學的<strong>漏水檢測</strong>不僅能精準執漏，還能為業主節省不必要的裝修費用，是評價「<strong>防水公司邊間好</strong>」的重要參考。</p>
+        
+        <h3 style="color: var(--primary-blue); margin: 30px 0 15px;">5. 防水工程價錢與長期保養</h3>
+        <p style="margin-bottom: 15px;">村屋維修的<strong>防水工程價錢</strong>受地理位置與施工難度影響。永盛工程行提供透明的報價體系，並針對村屋項目提供長達十年的<strong>防水保養</strong>。我們深知村屋維護的不易，因此堅持使用最高等級的耐候材料，確保防漏效果經得起時間考驗。</p>
+        
+        <p style="margin-top: 30px; font-weight: 600;">守護村屋資產，從專業防水開始。如果您正為村屋的滲漏問題感到困擾，請諮詢專業的<strong>香港防水公司</strong>——永盛工程行。我們憑藉 20 年的<strong>防漏工程</strong>經驗，為您的愛家提供最堅實的保障。立即聯絡我們，預約免費紅外線初步檢測！</p>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+    // 動態載入導航列
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+        
+        // 載入後重新綁定導航列事件
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (menuToggle && navMenu) {
+          menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            if (navMenu.classList.contains('active')) {
+              icon.classList.replace('fa-bars', 'fa-times');
+            } else {
+              icon.classList.replace('fa-times', 'fa-bars');
+            }
+          });
+        }
+
+        document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+          toggle.addEventListener('click', (e) => {
+            if(window.innerWidth <= 992) {
+              e.preventDefault();
+              const content = toggle.nextElementSibling;
+              content.classList.toggle('show');
+              const icon = toggle.querySelector('i');
+              if (content.classList.contains('show')) {
+                icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+              } else {
+                icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
+              }
+            }
+          });
+        });
+      });
+
+    // 動態載入頁腳
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+  </script>
+</body>
+</html>
