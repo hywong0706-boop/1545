@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>漏水應急指南 · 快速應對與修復方法 | 永盛工程行</title>
+  <!-- 關鍵字／描述 (取自原 info1.html) -->
+  <meta name="keywords" content="漏水應急,修復方法,家庭漏水,快速應對">
+  <meta name="description" content="生活中最糟心的事情之一莫過於家中突如其來的漏水問題。這篇文章將為你提供一個詳細的家庭漏水應急指南，幫助你在面對漏水時能夠迅速應對並有效修復。">
+  <!-- Inter 字體 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* 完全複製 index.html 的樣式 (保持一致) */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+      color: #1e2b3c;
+      line-height: 1.5;
+    }
+    .container { max-width: 1400px; margin: 0 auto; padding: 0 40px; }
+
+    :root {
+      --primary-blue: #0066b3;
+      --deep-blue: #002b5c;
+      --accent-yellow: #FFCC1A;
+    }
+
+    /* 導航 */
+    .navbar {
+      background: #ffffff; padding: 20px 0; border-bottom: 1px solid #eaeef2; position: sticky; top: 0; z-index: 100;
+    }
+    .navbar .container { 
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .logo a { display: flex; align-items: center; font-size: 1.8rem; font-weight: 700; color: #1e2b3c; text-decoration: none; }
+    .logo img { height: 52px; margin-right: 12px; }
+    
+    .nav-menu { 
+      display: flex; 
+      gap: 40px; 
+      align-items: center; 
+    }
+    .nav-menu a { 
+      color: #2c3e50; 
+      font-weight: 500; 
+      font-size: 1rem; 
+      text-decoration: none; 
+      transition: color 0.2s; 
+      cursor: pointer;
+    }
+    .nav-menu a:hover { color: var(--primary-blue); }
+    .nav-menu .dropdown { position: relative; }
+    .dropdown-content {
+      display: none; 
+      position: absolute; 
+      top: 100%; 
+      left: 0; 
+      background: white; 
+      box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+      min-width: 200px; 
+      border-radius: 8px; 
+      padding: 8px 0;
+      z-index: 10;
+    }
+    .dropdown-content.show { display: block; }
+    .dropdown-content a { 
+      display: block; 
+      padding: 10px 20px; 
+      font-size: 0.95rem; 
+      color: #1e2b3c; 
+    }
+    .dropdown-content a:hover { background: #f5f7fa; }
+
+    .nav-icons { display: flex; gap: 15px; }
+    .nav-icons a { color: #1e2b3c; font-size: 1.2rem; transition: color 0.2s; }
+    .nav-icons a:hover { color: var(--primary-blue); }
+
+    .menu-toggle { display: none; font-size: 1.8rem; cursor: pointer; color: #1e2b3c; }
+
+    /* 通用章節 */
+    .section { padding: 100px 0; }
+    .section-title { font-size: 2.8rem; font-weight: 600; letter-spacing: -0.02em; color: #1e2b3c; margin-bottom: 20px; }
+    .section-subtitle { font-size: 1.2rem; color: #5a6e85; max-width: 700px; margin-bottom: 60px; }
+    .text-center { text-align: center; }
+
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    
+    /* 圖片樣式 */
+    .article-img {
+      width: 100%;
+      border-radius: 30px;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .article-img:hover {
+      transform: scale(1.02);
+    }
+    .img-caption {
+      font-size: 0.95rem;
+      color: #5a6e85;
+      text-align: center;
+      margin-top: 10px;
+      font-style: italic;
+    }
+
+    /* 列表樣式 (用於章節內的清單) */
+    .list-block {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      list-style: none;
+      padding-left: 0;
+    }
+    .list-block li {
+      margin-bottom: 15px;
+      padding-left: 28px;
+      position: relative;
+    }
+    .list-block li::before {
+      content: "✓";
+      color: var(--primary-blue);
+      font-weight: 600;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    .list-block li strong {
+      color: var(--primary-blue);
+    }
+
+    /* 頁腳 */
+    .footer {
+      background: #0f1a2a; color: #cbd5e1; padding: 80px 0 30px;
+    }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 50px; margin-bottom: 50px; }
+    .footer-col h4 { font-size: 1.2rem; font-weight: 600; color: white; margin-bottom: 25px; }
+    .footer-col p, .footer-col a { color: #9aa9b9; text-decoration: none; line-height: 2; }
+    .footer-col a:hover { color: white; }
+    .footer-logo { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
+    .footer-logo img { height: 60px; filter: brightness(0) invert(0.8); }
+    .footer-logo span { font-size: 1.8rem; font-weight: 700; color: white; }
+    .subscribe { display: flex; margin-top: 20px; }
+    .subscribe input { flex: 1; padding: 14px; border: none; border-radius: 40px 0 0 40px; background: #1f2a3a; color: white; }
+    .subscribe button { padding: 14px 25px; border: none; background: var(--primary-blue); color: white; border-radius: 0 40px 40px 0; font-weight: 600; cursor: pointer; transition: background 0.2s; }
+    .subscribe button:hover { background: var(--accent-yellow); color: #1e2b3c; }
+    .footer-bottom { border-top: 1px solid #253040; padding-top: 30px; text-align: center; color: #6a7c94; }
+
+    /* 響應式 (完全複製 index) */
+    @media (max-width: 1200px) { 
+      .grid-4 { grid-template-columns: repeat(2,1fr); } 
+    }
+    @media (max-width: 992px) {
+      .menu-toggle { display: block; order: 3; }
+      .nav-menu { display: none; width: 100%; flex-direction: column; align-items: flex-start; gap: 15px; padding: 20px 0 20px 20px; background: white; border-top: 1px solid #eaeef2; margin-top: 10px; order: 4; }
+      .nav-menu.active { display: flex; }
+      .nav-menu > a, .nav-menu > .dropdown { width: 100%; }
+      .dropdown > a { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+      .dropdown-content { position: static; box-shadow: none; padding-left: 20px; background: transparent; display: none; width: 100%; }
+      .dropdown-content.show { display: block; }
+      .nav-icons { margin-left: auto; margin-right: 15px; }
+      .section { padding: 50px 0; }
+      .section-title { margin-bottom: 15px; font-size: 2.2rem; }
+      .grid-2 { grid-template-columns: 1fr !important; gap: 25px !important; }
+      .footer-grid { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 20px !important; margin-bottom: 30px; }
+      .footer-col:first-child { grid-column: 1 / -1; }
+      .footer-col:nth-child(2) { grid-column: 1 / 2; }
+      .footer-col:nth-child(3) { grid-column: 2 / 3; }
+      .footer-col:last-child { grid-column: 1 / -1; }
+      .footer { padding: 50px 0 20px; }
+      .container { padding: 0 20px; }
+      .article-img { margin-bottom: 10px; }
+      .list-block { font-size: 1rem; }
+    }
+    @media (max-width: 480px) {
+      .section-title { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="navbar-placeholder"></div>
+
+  <!-- 主要內容：漏水應急指南 -->
+  <!-- 標題區塊 (灰色背景) -->
+  <section class="section" style="background: #f7f9fc; padding: 60px 0;">
+    <div class="container text-center">
+      <h1 class="section-title" style="margin-bottom: 20px;">家庭漏水應急指南</h1>
+      <p class="section-subtitle" style="margin-left: auto; margin-right: auto; max-width: 900px;">
+        生活中最糟心的事情之一莫過於家中突如其來的漏水問題。從天花板滴落的水珠到地板上的水漬，每一處漏水都可能導致家具受損、電器短路，甚至對建築結構造成長期影響。這篇文章將為你提供一個詳細的家庭漏水應急指南，幫助你在面對漏水時，能夠迅速應對並有效修復，將損失降到最低。
+      </p>
+    </div>
+  </section>
+
+  <!-- 第一時間應急措施 (兩欄列表) -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title" style="margin-bottom: 30px;">第一時間應急措施</h2>
+      <p class="section-subtitle" style="margin-bottom: 40px;">當發現家中漏水時，最重要的是迅速採取應急措施，防止事態惡化。</p>
+      <div class="grid-2">
+        <ul class="list-block">
+          <li><strong>關閉水源：</strong>立即關閉家中的主要水閥，以防止水流繼續蔓延。</li>
+          <li><strong>清理積水：</strong>使用拖把、毛巾或吸水機迅速清理漏水區域的積水，防止水進一步滲入地板或牆壁。</li>
+        </ul>
+        <ul class="list-block">
+          <li><strong>斷開電源：</strong>確保漏水區域的電源已被切斷，防止漏水導致的短路和電擊事故。</li>
+          <li><strong>保護家具：</strong>將易受水損的家具和電器移到安全的地方，或者用防水布覆蓋保護。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 漏水原因的排查 (左圖右文) -->
+  <section class="section" style="background: #f7f9fc;">
+    <div class="container">
+      <div class="grid-2">
+        <div>
+          <img src="assets/images/whatsapp-image-2024-06-21-at-2.18.12-pm-702x936.jpeg" alt="漏水排查" class="article-img" onerror="this.src='https://via.placeholder.com/800x1000?text=漏水排查';">
+          <p class="img-caption">永盛工程行師傅正在排查漏水位置。</p>
+        </div>
+        <div>
+          <h2 class="section-title" style="font-size: 2.2rem; margin-bottom: 20px;">漏水原因的排查</h2>
+          <p style="margin-bottom: 25px; color: #5a6e85;">在應急措施之後，下一步就是找出漏水的原因。不同位置的漏水原因可能有所不同。</p>
+          <ul class="list-block">
+            <li><strong>屋頂：</strong>檢查屋頂瓦片或防水層是否破損，特別是接縫處。</li>
+            <li><strong>浴室：</strong>檢查浴缸、淋浴間、馬桶底座的防水層是否完好。</li>
+            <li><strong>地板：</strong>檢查地板縫隙和接縫處是否有滲水跡象。</li>
+            <li><strong>窗戶：</strong>檢查窗框和玻璃周圍的密封條是否老化或損壞。</li>
+            <li><strong>廚房：</strong>檢查鋅盤、水龍頭和排水管道的接頭是否漏水。</li>
+            <li><strong>喉管：</strong>檢查水喉和排水管道的接頭、龍頭、閥門是否有漏水現象。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 常見漏水問題的修復方法 (兩欄列表) -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title" style="margin-bottom: 30px;">常見漏水問題的修復方法</h2>
+      <div class="grid-2">
+        <ul class="list-block">
+          <li><strong>屋頂漏水</strong><br>更換瓦片或修補防水層；清理排水溝。</li>
+          <li><strong>窗戶漏水</strong><br>更換密封條；加強密封。</li>
+          <li><strong>管道漏水</strong><br>更換損壞的管道或接頭；加強接頭密封。</li>
+        </ul>
+        <ul class="list-block">
+          <li><strong>浴室漏水</strong><br>重新做防水層；檢查排水系統。</li>
+          <li><strong>廚房漏水</strong><br>更換密封件；加強接頭密封。</li>
+          <li><strong>牆壁漏水</strong><br>修補裂縫；加強牆壁防水層。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 漏水後的善後工作 (左圖右文) -->
+  <section class="section" style="background: #f7f9fc;">
+    <div class="container">
+      <div class="grid-2">
+        <div>
+          <img src="assets/images/whatsapp-image-2024-06-21-at-1.42.21-pm-815x543.jpeg" alt="漏水善後" class="article-img" onerror="this.src='https://via.placeholder.com/800x600?text=漏水善後';">
+          <p class="img-caption">清拆師傅正在打拆天台防水層。</p>
+        </div>
+        <div>
+          <h2 class="section-title" style="font-size: 2.2rem; margin-bottom: 20px;">漏水後的善後工作</h2>
+          <p style="margin-bottom: 25px; color: #5a6e85;">在修復完成後，還需進行一系列善後工作，確保不會留下隱患。</p>
+          <ul class="list-block">
+            <li><strong>除濕防霉：</strong>保持室內通風，使用除濕機，在修復區域使用防霉劑。</li>
+            <li><strong>檢查修復效果：</strong>定期檢查修復區域，對易漏水的部位進行定期維護。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <!-- 返回頂部按鈕 -->
+  <div style="position:fixed; bottom:40px; right:40px; background:var(--primary-blue); color:white; width:50px; height:50px; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow:0 5px 15px rgba(0,102,179,0.3);" onclick="window.scrollTo({top:0,behavior:'smooth'});"><i class="fas fa-arrow-up"></i></div>
+
+  <!-- 腳本：漢堡選單 + 下拉箭頭 (與 index 完全相同) -->
+  <script>
+    // 導航列初始化函數
+    function initNavbar() {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+      if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', function(e) {
+          e.stopPropagation();
+          navMenu.classList.toggle('active');
+          const icon = this.querySelector('i');
+          if (navMenu.classList.contains('active')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+          } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+          }
+        });
+      }
+
+      const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+      dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          const dropdown = this.closest('.dropdown');
+          if (!dropdown) return;
+          const content = dropdown.querySelector('.dropdown-content');
+          if (!content) return;
+          content.classList.toggle('show');
+          const icon = this.querySelector('i');
+          if (icon) {
+            if (content.classList.contains('show')) {
+              icon.classList.remove('fa-chevron-down');
+              icon.classList.add('fa-chevron-up');
+            } else {
+              icon.classList.remove('fa-chevron-up');
+              icon.classList.add('fa-chevron-down');
+            }
+          }
+          if (content.classList.contains('show')) {
+            document.querySelectorAll('.dropdown-content.show').forEach(otherContent => {
+              if (otherContent !== content) {
+                otherContent.classList.remove('show');
+                const otherToggle = otherContent.closest('.dropdown')?.querySelector('.dropdown-toggle i');
+                if (otherToggle) {
+                  otherToggle.classList.remove('fa-chevron-up');
+                  otherToggle.classList.add('fa-chevron-down');
+                }
+              }
+            });
+          }
+        });
+      });
+
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.dropdown')) {
+          document.querySelectorAll('.dropdown-content.show').forEach(content => {
+            content.classList.remove('show');
+            const parentDrop = content.closest('.dropdown');
+            if (parentDrop) {
+              const icon = parentDrop.querySelector('.dropdown-toggle i');
+              if (icon) {
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+              }
+            }
+          });
+        }
+      });
+    }
+
+    // 動態載入導航列
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+        initNavbar(); // 載入後初始化
+      });
+
+    // 動態載入頁腳
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+  </script>
+</body>
+</html>

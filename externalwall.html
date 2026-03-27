@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image:src" content="assets/images/externalwall-meta.jpeg">
+  <meta property="og:image" content="assets/images/externalwall-meta.jpeg">
+  <meta name="twitter:title" content="外牆漏水| 外牆防水工程的施工步驟">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/logo-196x119.png" type="image/x-icon">
+  <meta name="description" content="外牆漏水解決步驟：１. 高壓水槍清洗外牆 2. 外牆補裂縫 3. 塗外牆防水底漆 4.塗外牆表層防水材料 5.塗抹完成後拆除棚架等設備，同時清理外牆施工嘅環境。">
+  <title>外牆漏水| 外牆防水工程的施工步驟</title>
+  <!-- Inter 字體 (與 index 一致) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* ===== 完全複製 index.html 的樣式 ===== */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+      color: #1e2b3c;
+      line-height: 1.5;
+    }
+    .container { max-width: 1400px; margin: 0 auto; padding: 0 40px; }
+
+    :root {
+      --primary-blue: #0066b3;
+      --deep-blue: #002b5c;
+      --accent-yellow: #FFCC1A;
+    }
+
+    /* 導航 */
+    .navbar {
+      background: #ffffff; padding: 20px 0; border-bottom: 1px solid #eaeef2; position: sticky; top: 0; z-index: 100;
+    }
+    .navbar .container { 
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .logo a { display: flex; align-items: center; font-size: 1.8rem; font-weight: 700; color: #1e2b3c; text-decoration: none; }
+    .logo img { height: 52px; margin-right: 12px; }
+    
+    .nav-menu { 
+      display: flex; 
+      gap: 40px; 
+      align-items: center; 
+    }
+    .nav-menu a { 
+      color: #2c3e50; 
+      font-weight: 500; 
+      font-size: 1rem; 
+      text-decoration: none; 
+      transition: color 0.2s; 
+      cursor: pointer;
+    }
+    .nav-menu a:hover { color: var(--primary-blue); }
+    .nav-menu .dropdown { 
+      position: relative; 
+    }
+    .dropdown-content {
+      display: none; 
+      position: absolute; 
+      top: 100%; 
+      left: 0; 
+      background: white; 
+      box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+      min-width: 200px; 
+      border-radius: 8px; 
+      padding: 8px 0;
+      z-index: 10;
+    }
+    .dropdown-content.show {
+      display: block;
+    }
+    .dropdown-content a { 
+      display: block; 
+      padding: 10px 20px; 
+      font-size: 0.95rem; 
+      color: #1e2b3c; 
+    }
+    .dropdown-content a:hover { background: #f5f7fa; }
+
+    .nav-icons { display: flex; gap: 15px; }
+    .nav-icons a { color: #1e2b3c; font-size: 1.2rem; transition: color 0.2s; }
+    .nav-icons a:hover { color: var(--primary-blue); }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: #1e2b3c;
+    }
+
+    /* Hero */
+    .hero {
+      height: 70vh; background: linear-gradient(rgba(20,30,45,0.85), rgba(20,30,45,0.85)), url('assets/images/externalwall-meta.jpeg') center/cover no-repeat;
+      display: flex; align-items: center; color: white;
+    }
+    .hero-content { max-width: 900px; }
+    .hero .problem-tag {
+      display: inline-block; background: rgba(255,255,255,0.1); backdrop-filter: blur(5px);
+      padding: 8px 20px; border-radius: 40px; font-size: 1rem; margin-bottom: 30px; border-left: 4px solid var(--primary-blue);
+      letter-spacing: 0.5px;
+    }
+    .hero h1 { font-size: 4.2rem; font-weight: 700; line-height: 1.2; margin-bottom: 1.5rem; }
+    .hero p { font-size: 1.3rem; margin-bottom: 2.5rem; opacity: 0.95; max-width: 700px; }
+    .btn-group { display: flex; gap: 20px; flex-wrap: wrap; }
+    .btn {
+      display: inline-block; padding: 16px 42px; border-radius: 40px; font-weight: 600; font-size: 1.1rem;
+      text-decoration: none; transition: all 0.3s ease; border: none; cursor: pointer;
+    }
+    .btn-primary { background: var(--primary-blue); color: white; }
+    .btn-primary:hover { background: var(--deep-blue); transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0,102,179,0.2); }
+    .btn-outline { background: transparent; border: 2px solid white; color: white; }
+    .btn-outline:hover { background: white; color: #1e2b3c; transform: translateY(-2px); }
+
+    /* 通用章節 */
+    .section { padding: 100px 0; }
+    .section-title { font-size: 2.8rem; font-weight: 600; letter-spacing: -0.02em; color: #1e2b3c; margin-bottom: 20px; }
+    .section-subtitle { font-size: 1.2rem; color: #5a6e85; max-width: 700px; margin-bottom: 60px; }
+    .text-center { text-align: center; }
+
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; }
+
+    /* 痛點卡片 (同時用於步驟卡片) */
+    .pain-card {
+      background: #ffffff; border-radius: 16px; padding: 40px; 
+      border: 1px solid #edf2f7;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.02); height: 100%;
+      transition: 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .pain-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 8px;
+      height: 100%;
+      background: var(--deep-blue);
+    }
+    .pain-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.05);
+      border-color: var(--accent-yellow);
+    }
+    .pain-card i {
+      font-size: 3rem; 
+      color: var(--primary-blue);
+      margin-bottom: 20px;
+      transition: 0.2s;
+    }
+    .pain-card:hover i { color: var(--accent-yellow); }
+    .pain-card h3 { 
+      font-size: 1.8rem; 
+      font-weight: 700; 
+      margin-bottom: 20px; 
+      color: var(--primary-blue);
+    }
+    .pain-card p { 
+      color: #5a6e85; 
+      font-size: 1.1rem; 
+      line-height: 1.6; 
+    }
+
+    /* 服務卡片 */
+    .service-card {
+      background: white; border-radius: 24px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.02);
+      transition: 0.3s; height: 100%; border: 1px solid #edf2f7;
+    }
+    .service-card:hover { transform: translateY(-8px); box-shadow: 0 30px 60px rgba(0,0,0,0.08); border-color: var(--accent-yellow); }
+    .service-img { height: 260px; background-size: cover; background-position: center; }
+    .service-content { padding: 30px; }
+    .service-content h3 { font-size: 1.8rem; font-weight: 600; margin-bottom: 15px; color: #1e2b3c; }
+    .service-content p { color: #5a6e85; margin-bottom: 20px; }
+    .service-link { color: var(--primary-blue); font-weight: 600; text-decoration: none; border-bottom: 2px solid transparent; transition: 0.2s; }
+    .service-link:hover { border-bottom-color: var(--accent-yellow); }
+
+    /* 統計數字 */
+    .stats { background: #f7f9fc; padding: 80px 0; }
+    .stat-item { text-align: center; }
+    .stat-number { font-size: 4rem; font-weight: 700; color: var(--primary-blue); margin-bottom: 5px; }
+    .stat-label { font-size: 1.2rem; color: #2c3e50; text-transform: uppercase; letter-spacing: 1px; }
+
+    /* 案例 */
+    .case-item {
+      position: relative; border-radius: 20px; overflow: hidden;
+    }
+    .case-item img { width: 100%; height: 280px; object-fit: cover; transition: 0.6s; }
+    .case-item:hover img { transform: scale(1.05); }
+    .case-overlay {
+      position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+      color: white; padding: 30px 20px 20px;
+    }
+    .case-overlay h4 { font-size: 1.5rem; font-weight: 600; margin-bottom: 5px; }
+    .case-overlay p { font-size: 0.95rem; opacity: 0.9; }
+    .case-badge {
+      position: absolute; top: 20px; left: 20px; background: var(--accent-yellow);
+      color: #1e2b3c;
+      padding: 6px 14px; border-radius: 40px; font-weight: 500; font-size: 0.85rem; letter-spacing: 0.3px;
+    }
+
+    /* 客戶評價 */
+    .testimonial-card {
+      background: #f7f9fc; border-radius: 24px; padding: 40px;
+    }
+    .testimonial-card .meta {
+      background: var(--accent-yellow);
+      color: #1e2b3c;
+      font-weight: 500;
+      margin-bottom: 10px;
+      padding: 4px 12px;
+      border-radius: 30px;
+      display: inline-block;
+      font-size: 0.95rem;
+      border: none;
+    }
+    .testimonial-card p { font-size: 1.1rem; line-height: 1.7; color: #1e2b3c; margin-bottom: 25px; }
+    .testimonial-card h5 { font-size: 1.2rem; font-weight: 600; color: #1e2b3c; }
+
+    /* 流程步驟 (橫向) */
+    .steps { display: flex; justify-content: space-between; gap: 20px; margin-top: 40px; }
+    .step { flex: 1; text-align: center; }
+    .step-number {
+      width: 70px; height: 70px; background: #eef2f6; border-radius: 50%; display: flex; align-items: center;
+      justify-content: center; font-size: 2rem; font-weight: 700; color: #1e2b3c; margin: 0 auto 25px;
+      transition: 0.2s;
+    }
+    .step:hover .step-number { background: var(--accent-yellow); color: #1e2b3c; }
+    .step h4 { font-size: 1.3rem; font-weight: 600; margin-bottom: 10px; }
+    .step p { color: #5a6e85; }
+
+    /* FAQ */
+    .faq-item { border-bottom: 1px solid #edf2f7; padding: 25px 0; }
+    .faq-question {
+      font-size: 1.3rem; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+      color: #1e2b3c;
+    }
+    .faq-question i { color: var(--primary-blue); }
+    .faq-answer { padding-top: 15px; color: #5a6e85; display: none; line-height: 1.7; }
+    .faq-item.active .faq-answer { display: block; }
+
+    /* 表單 */
+    .form-section { background: #f7f9fc; padding: 80px 0; }
+    .form-card {
+      background: white; border-radius: 40px; padding: 60px; box-shadow: 0 20px 40px rgba(0,0,0,0.02); max-width: 1000px; margin: 0 auto;
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+    .form-group { margin-bottom: 20px; }
+    .form-group input, .form-group textarea, .form-group select {
+      width: 100%; padding: 16px; border: 1px solid #d0ddee; border-radius: 12px; font-size: 1rem; background: #fafcfd;
+    }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+      border-color: var(--accent-yellow);
+      outline: none;
+    }
+
+    /* 特色標籤 */
+    .feature-tags {
+      display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 40px;
+    }
+    .feature-tag {
+      background: white; border: 1px solid #e0e7ef; border-radius: 40px; padding: 10px 25px;
+      display: flex; align-items: center; gap: 10px; font-weight: 500; color: #1e2b3c;
+    }
+    .feature-tag i { color: var(--accent-yellow); }
+
+    /* 頁腳 (完全複製 index) */
+    .footer {
+      background: #0f1a2a; color: #cbd5e1; padding: 80px 0 30px;
+    }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 50px; margin-bottom: 50px; }
+    .footer-col h4 { font-size: 1.2rem; font-weight: 600; color: white; margin-bottom: 25px; }
+    .footer-col p, .footer-col a { color: #9aa9b9; text-decoration: none; line-height: 2; }
+    .footer-col a:hover { color: white; }
+    .footer-logo { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
+    .footer-logo img { height: 60px; filter: brightness(0) invert(0.8); }
+    .footer-logo span { font-size: 1.8rem; font-weight: 700; color: white; }
+    .subscribe { display: flex; margin-top: 20px; }
+    .subscribe input { flex: 1; padding: 14px; border: none; border-radius: 40px 0 0 40px; background: #1f2a3a; color: white; }
+    .subscribe button { padding: 14px 25px; border: none; background: var(--primary-blue); color: white; border-radius: 0 40px 40px 0; font-weight: 600; cursor: pointer; transition: background 0.2s; }
+    .subscribe button:hover { background: var(--accent-yellow); color: #1e2b3c; }
+    .footer-bottom { border-top: 1px solid #253040; padding-top: 30px; text-align: center; color: #6a7c94; }
+
+    /* ===== 響應式設計 (完全複製 index) ===== */
+    @media (max-width: 1200px) { 
+      .grid-4 { grid-template-columns: repeat(2,1fr); } 
+    }
+    
+    @media (max-width: 992px) {
+      .menu-toggle {
+        display: block;
+        order: 3;
+      }
+      .nav-menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 20px 0 20px 20px;
+        background: white;
+        border-top: 1px solid #eaeef2;
+        margin-top: 10px;
+        order: 4;
+      }
+      .nav-menu.active {
+        display: flex;
+      }
+      .nav-menu > a, .nav-menu > .dropdown {
+        width: 100%;
+      }
+      .dropdown {
+        position: relative;
+      }
+      .dropdown > a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        pointer-events: auto; 
+      }
+      .dropdown-content {
+        position: static;
+        box-shadow: none;
+        padding-left: 20px;
+        background: transparent;
+        display: none;
+        width: 100%;
+      }
+      .dropdown-content.show {
+        display: block;
+      }
+      .nav-icons {
+        margin-left: auto;
+        margin-right: 15px;
+      }
+      .section {
+        padding: 50px 0;
+      }
+      .section-title {
+        margin-bottom: 15px;
+        font-size: 2.2rem;
+      }
+      .section-subtitle {
+        margin-bottom: 30px;
+        font-size: 1rem;
+      }
+      .pain-card, .testimonial-card, .service-content {
+        padding: 25px;
+      }
+      .pain-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+      }
+      .service-content h3 {
+        font-size: 1.5rem;
+      }
+      .step-number {
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+      }
+      .step h4 {
+        font-size: 1.1rem;
+      }
+      .form-card {
+        padding: 30px 20px;
+      }
+      .footer-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 20px !important;
+        margin-bottom: 30px;
+      }
+      .footer-col:first-child {
+        grid-column: 1 / -1;
+      }
+      .footer-col:nth-child(2) {
+        grid-column: 1 / 2;
+      }
+      .footer-col:nth-child(3) {
+        grid-column: 2 / 3;
+      }
+      .footer-col:last-child {
+        grid-column: 1 / -1;
+      }
+      .footer-col h4 {
+        margin-bottom: 15px;
+      }
+      .footer-col p, .footer-col a {
+        line-height: 1.8;
+      }
+      .subscribe {
+        margin-top: 10px;
+      }
+      .footer {
+        padding: 50px 0 20px;
+      }
+      .pain-card p,
+      .service-content p,
+      .testimonial-card p,
+      .step p,
+      .case-overlay p,
+      .faq-answer,
+      .feature-tag,
+      .footer-col p,
+      .footer-col a,
+      .stat-label {
+        font-size: 0.85rem;
+      }
+      .case-badge {
+        font-size: 0.75rem;
+      }
+      .testimonial-card .meta {
+        font-size: 0.8rem;
+      }
+      .grid-2, .grid-3, .grid-4, .steps {
+        grid-template-columns: 1fr !important;
+        gap: 25px !important;
+      }
+      .steps {
+        flex-direction: column;
+      }
+      .hero {
+        height: auto;
+        min-height: 70vh;
+        padding: 60px 0;
+      }
+      .hero h1 {
+        font-size: 2.8rem;
+      }
+      .hero p {
+        font-size: 1.1rem;
+      }
+      .btn-group {
+        justify-content: flex-start;
+      }
+      .btn {
+        padding: 14px 30px;
+        font-size: 1rem;
+      }
+      .container {
+        padding: 0 20px;
+      }
+      .grid-2 > div:last-child img {
+        margin-top: 20px;
+      }
+      .case-item img {
+        height: 200px;
+      }
+      .case-overlay {
+        padding: 20px 15px;
+      }
+      .case-overlay h4 {
+        font-size: 1.3rem;
+      }
+      .stat-number {
+        font-size: 3rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .section-title {
+        font-size: 1.8rem;
+      }
+      .pain-card h3 {
+        font-size: 1.3rem;
+      }
+      .service-content h3 {
+        font-size: 1.3rem;
+      }
+      .btn {
+        width: 100%;
+        max-width: 280px;
+      }
+    }
+
+    /* ===== 此頁面專屬樣式 (與 index 風格整合) ===== */
+    .steps-with-image {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: start;
+    }
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+    .steps-image {
+      position: sticky;
+      top: 120px;
+    }
+    .steps-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 30px;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+      border: 1px solid #edf2f7;
+    }
+    .image-caption {
+      margin-top: 15px;
+      text-align: center;
+      color: #5a6e85;
+      font-size: 0.95rem;
+    }
+    /* 步驟卡片內的數字圓圈 */
+    .step-number-lg {
+      width: 60px;
+      height: 60px;
+      background: #eef2f6;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1e2b3c;
+      margin-bottom: 20px;
+      transition: background 0.2s;
+    }
+    .pain-card:hover .step-number-lg {
+      background: var(--accent-yellow);
+    }
+    /* 地圖 + 聯絡區塊 (仿 index 卡片風格) */
+    .contact-map-section {
+      background: #f7f9fc;
+      padding: 80px 0;
+    }
+    .map-contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .map-wrapper iframe {
+      width: 100%;
+      height: 350px;
+      border-radius: 30px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+    }
+    .contact-info-card {
+      background: white;
+      border-radius: 30px;
+      padding: 40px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.02);
+      border: 1px solid #edf2f7;
+    }
+    .contact-info-card h2 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      margin-bottom: 30px;
+      color: #1e2b3c;
+    }
+    .contact-info-card p {
+      font-size: 1.2rem;
+      color: #1e2b3c;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .contact-info-card i {
+      color: var(--primary-blue);
+      width: 30px;
+      font-size: 1.4rem;
+    }
+    .contact-info-card a {
+      color: #1e2b3c;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: 0.2s;
+    }
+    .contact-info-card a:hover {
+      color: var(--primary-blue);
+      border-bottom-color: var(--accent-yellow);
+    }
+    .contact-highlight {
+      background: var(--accent-yellow);
+      color: #1e2b3c;
+      padding: 4px 12px;
+      border-radius: 30px;
+      font-weight: 600;
+      display: inline-block;
+      margin-right: 8px;
+    }
+    @media (max-width: 992px) {
+      .steps-with-image {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .steps-image {
+        position: static;
+        order: -1;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .steps-grid {
+        grid-template-columns: 1fr;
+      }
+      .map-contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <!-- Hero 區塊 (保留原有標題，移除按鈕) -->
+  <section class="hero" style="background-image: linear-gradient(rgba(20,30,45,0.85), rgba(20,30,45,0.85)), url('assets/images/externalwall-meta.jpeg');">
+    <div class="container">
+      <div class="hero-content">
+        <div class="problem-tag">外牆防水 · 施工步驟</div>
+        <h1>外牆漏水｜<br>外牆防水工程的施工步驟</h1>
+        <p>7大步驟徹底解決外牆滲漏，使用專業儀器檢測，確保防水層壽命長久。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 施工步驟區塊 (卡片風格，七大步驟+檢測，右側圖片) -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title text-center">外牆防水施工 · 七大步驟</h2>
+      <p class="section-subtitle text-center">每一個細節都嚴格把關，杜絕反覆漏水</p>
+      
+      <div class="steps-with-image">
+        <!-- 左側：步驟卡片網格 -->
+        <div class="steps-grid">
+          <div class="pain-card">
+            <span class="step-number-lg">1</span>
+            <h3>搭建輔助工具</h3>
+            <p>根據環境選擇棚架或工程吊車，確保施工安全及覆蓋所有區域。</p>
+          </div>
+          <div class="pain-card">
+            <span class="step-number-lg">2</span>
+            <h3>整平清潔外牆</h3>
+            <p>清除外牆髒物、舊漆，整平凹凸位置，讓防水材料完全貼合。</p>
+          </div>
+          <div class="pain-card">
+            <span class="step-number-lg">3</span>
+            <h3>檢查修補裂縫</h3>
+            <p>仔細檢查每一處裂縫，使用專用物料填補，結構回復穩固。</p>
+          </div>
+          <div class="pain-card">
+            <span class="step-number-lg">4</span>
+            <h3>選擇良好天氣</h3>
+            <p>避免雨天、大風或濕度過高，確保塗層乾燥及附著力。</p>
+          </div>
+          <div class="pain-card">
+            <span class="step-number-lg">5</span>
+            <h3>均勻塗抹底漆</h3>
+            <p>先上底漆，再塗透氣中層，最後施作透明面漆，層層保護。</p>
+          </div>
+          <div class="pain-card">
+            <span class="step-number-lg">6</span>
+            <h3>拆除設備清理</h3>
+            <p>完成後拆除棚架或吊車，徹底清理施工環境，還原整潔。</p>
+          </div>
+          <div class="pain-card">
+            <span class="step-number-lg">7</span>
+            <h3>檢查加強</h3>
+            <p>全面檢查塗層，如有需要立即補強，確保防水層零死角。</p>
+          </div>
+          <div class="pain-card" style="background: #f7f9fc;">
+            <i class="fas fa-microscope"></i>
+            <h3>科學檢測背書</h3>
+            <p>完工後以測濕儀確認外牆含水率，提供數據報告及保修。</p>
+          </div>
+        </div>
+        
+        <!-- 右側：外牆防水大圖 -->
+        <div class="steps-image">
+          <img src="assets/images/externalwall-meta.jpeg" alt="外牆防水施工" onerror="this.src='https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&auto=format';">
+          <div class="image-caption">
+            <i class="fas fa-camera" style="color: var(--primary-blue); margin-right: 5px;"></i> 外牆防水工程實況
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 地圖 + 聯絡資訊區 (保留原有資訊，樣式整合) -->
+  <section class="contact-map-section" id="contact-map">
+    <div class="container">
+      <div class="map-contact-grid">
+        <div class="map-wrapper">
+          <iframe frameborder="0" style="border:0; width:100%; height:350px; border-radius:30px;" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB7QWkvlxV39ZsyKvhZRjPGVqlJFvxxNkw&amp;q=MAI WAH IND BLDG, KWAI CHUNG" allowfullscreen=""></iframe>
+        </div>
+        <div class="contact-info-card">
+          <h2><strong>立即查詢防水工程報價</strong></h2>
+          <p><i class="fas fa-building"></i> <strong>永盛工程行</strong><br><span style="margin-left: 38px;">WING SHING ENGINEERING CO.</span></p>
+          <p><i class="fas fa-map-pin"></i> UNIT1, 7/F, BLK D, MAI WAH IND BLDG, KWAI CHUNG</p>
+          <p><i class="fas fa-phone-alt"></i> <a href="tel:+85298568540"><span class="contact-highlight">9856 8540</span></a></p>
+          <p><i class="fab fa-whatsapp"></i> <a href="https://api.whatsapp.com/send?phone=85298568540" class="text-warning"><strong>WhatsApp 即時諮詢</strong></a></p>
+          <p><i class="fas fa-envelope"></i> <a href="mailto:wsenghk@gmail.com">wsenghk@gmail.com</a></p>
+          <p><i class="fas fa-globe"></i> <a href="https://www.wsenghk.com/">wsenghk.com</a></p>
+          <div style="margin-top: 25px;">
+            <a href="https://api.whatsapp.com/send?phone=85298568540" class="btn btn-primary" style="padding: 14px 32px;"><i class="fab fa-whatsapp"></i> 免費諮詢</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <!-- 返回頂部按鈕 (與 index 相同) -->
+  <div style="position:fixed; bottom:40px; right:40px; background:var(--primary-blue); color:white; width:50px; height:50px; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow:0 5px 15px rgba(0,102,179,0.3);" onclick="window.scrollTo({top:0,behavior:'smooth'});"><i class="fas fa-arrow-up"></i></div>
+
+  <!-- 互動腳本 (完全複製自 index) -->
+  <script>
+    // 導航列初始化函數
+    function initNavbar() {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+      if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', function(e) {
+          e.stopPropagation();
+          navMenu.classList.toggle('active');
+          const icon = this.querySelector('i');
+          if (navMenu.classList.contains('active')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+          } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+          }
+        });
+      }
+
+      const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+      dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          const dropdown = this.closest('.dropdown');
+          if (!dropdown) return;
+          const content = dropdown.querySelector('.dropdown-content');
+          if (!content) return;
+          content.classList.toggle('show');
+          const icon = this.querySelector('i');
+          if (icon) {
+            if (content.classList.contains('show')) {
+              icon.classList.remove('fa-chevron-down');
+              icon.classList.add('fa-chevron-up');
+            } else {
+              icon.classList.remove('fa-chevron-up');
+              icon.classList.add('fa-chevron-down');
+            }
+          }
+          if (content.classList.contains('show')) {
+            document.querySelectorAll('.dropdown-content.show').forEach(otherContent => {
+              if (otherContent !== content) {
+                otherContent.classList.remove('show');
+                const otherToggle = otherContent.closest('.dropdown')?.querySelector('.dropdown-toggle i');
+                if (otherToggle) {
+                  otherToggle.classList.remove('fa-chevron-up');
+                  otherToggle.classList.add('fa-chevron-down');
+                }
+              }
+            });
+          }
+        });
+      });
+
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.dropdown')) {
+          document.querySelectorAll('.dropdown-content.show').forEach(content => {
+            content.classList.remove('show');
+            const parentDrop = content.closest('.dropdown');
+            if (parentDrop) {
+              const icon = parentDrop.querySelector('.dropdown-toggle i');
+              if (icon) {
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+              }
+            }
+          });
+        }
+      });
+    }
+
+    // 動態載入導航列
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+        initNavbar(); // 載入後初始化
+      });
+
+    // 動態載入頁腳
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+
+    // FAQ 點擊切換 (此頁沒有 FAQ 元素，但保留無妨)
+    document.querySelectorAll('.faq-question').forEach(item => {
+      item.addEventListener('click', () => {
+        const faq = item.parentElement;
+        faq.classList.toggle('active');
+        const icon = item.querySelector('i');
+        if (faq.classList.contains('active')) {
+          icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+        } else {
+          icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
+        }
+      });
+    });
+  </script>
+
+  <!-- 移除 Mobirise 殘留樣式 (無需保留) -->
+  <style>
+    /* 確保沒有任何隱藏元素影響佈局 */
+    [id*="hide-footer"] { display: none !important; }
+  </style>
+</body>
+</html>

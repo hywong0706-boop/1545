@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>4種專業防水常用的漏水檢查方法！｜永盛工程行</title>
+  <meta name="keywords" content="漏水檢查,防水檢測,紅外線檢測,電子測漏,滲漏原因">
+  <meta name="description" content="建築物滲漏問題逐漸成為令人頭痛的麻煩。今天，我們來探討4種專業防水常用的漏水檢查方法！">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* ===== 基礎樣式 (完全取自 index.html) ===== */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+      color: #1e2b3c;
+      line-height: 1.5;
+    }
+    .container { max-width: 1400px; margin: 0 auto; padding: 0 40px; }
+    :root {
+      --primary-blue: #0066b3;
+      --deep-blue: #002b5c;
+      --accent-yellow: #FFCC1A;
+    }
+    /* 導航 */
+    .navbar {
+      background: #ffffff; padding: 20px 0; border-bottom: 1px solid #eaeef2; position: sticky; top: 0; z-index: 100;
+    }
+    .navbar .container { 
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .logo a { display: flex; align-items: center; font-size: 1.8rem; font-weight: 700; color: #1e2b3c; text-decoration: none; }
+    .logo img { height: 52px; margin-right: 12px; }
+    .nav-menu { 
+      display: flex; 
+      gap: 40px; 
+      align-items: center; 
+    }
+    .nav-menu a { 
+      color: #2c3e50; 
+      font-weight: 500; 
+      font-size: 1rem; 
+      text-decoration: none; 
+      transition: color 0.2s; 
+      cursor: pointer;
+    }
+    .nav-menu a:hover { color: var(--primary-blue); }
+    .nav-menu .dropdown { position: relative; }
+    .dropdown-content {
+      display: none; 
+      position: absolute; 
+      top: 100%; 
+      left: 0; 
+      background: white; 
+      box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+      min-width: 200px; 
+      border-radius: 8px; 
+      padding: 8px 0;
+      z-index: 10;
+    }
+    .dropdown-content.show { display: block; }
+    @media (min-width: 993px) {
+      .dropdown:hover .dropdown-content { display: block; }
+    }
+    .dropdown-content a { 
+      display: block; 
+      padding: 10px 20px; 
+      font-size: 0.95rem; 
+      color: #1e2b3c; 
+    }
+    .dropdown-content a:hover { background: #f5f7fa; }
+    .nav-icons { display: flex; gap: 15px; }
+    .nav-icons a { color: #1e2b3c; font-size: 1.2rem; transition: color 0.2s; }
+    .nav-icons a:hover { color: var(--primary-blue); }
+    .menu-toggle {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: #1e2b3c;
+    }
+    /* 通用章節 */
+    .section { padding: 100px 0; }
+    .section-title { font-size: 2.8rem; font-weight: 600; letter-spacing: -0.02em; color: #1e2b3c; margin-bottom: 20px; }
+    .section-subtitle { font-size: 1.2rem; color: #5a6e85; max-width: 700px; margin-bottom: 60px; }
+    .text-center { text-align: center; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; }
+    /* 按鈕 */
+    .btn {
+      display: inline-block; padding: 16px 42px; border-radius: 40px; font-weight: 600; font-size: 1.1rem;
+      text-decoration: none; transition: all 0.3s ease; border: none; cursor: pointer; text-align: center;
+    }
+    .btn-primary { background: var(--primary-blue); color: white; }
+    .btn-primary:hover { background: var(--deep-blue); transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0,102,179,0.2); }
+    .btn-outline { background: transparent; border: 2px solid var(--primary-blue); color: var(--primary-blue); }
+    .btn-outline:hover { background: var(--primary-blue); color: white; }
+    /* 卡片 */
+    .info-card {
+      background: white; border-radius: 24px; padding: 30px;
+      border: 1px solid #edf2f7; box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+      transition: 0.3s; height: 100%;
+    }
+    .info-card:hover { border-color: var(--accent-yellow); transform: translateY(-4px); }
+    .info-card i { color: var(--primary-blue); font-size: 2rem; margin-bottom: 15px; }
+    .feature-tag {
+      background: white; border: 1px solid #e0e7ef; border-radius: 40px; padding: 10px 25px;
+      display: flex; align-items: center; gap: 10px; font-weight: 500; color: #1e2b3c;
+    }
+    .feature-tag i { color: var(--accent-yellow); }
+    /* 頁腳 */
+    .footer {
+      background: #0f1a2a; color: #cbd5e1; padding: 80px 0 30px;
+    }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 50px; margin-bottom: 50px; }
+    .footer-col h4 { font-size: 1.2rem; font-weight: 600; color: white; margin-bottom: 25px; }
+    .footer-col p, .footer-col a { color: #9aa9b9; text-decoration: none; line-height: 2; }
+    .footer-col a:hover { color: white; }
+    .footer-logo { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
+    .footer-logo img { height: 60px; filter: brightness(0) invert(0.8); }
+    .footer-logo span { font-size: 1.8rem; font-weight: 700; color: white; }
+    .subscribe { display: flex; margin-top: 20px; }
+    .subscribe input { flex: 1; padding: 14px; border: none; border-radius: 40px 0 0 40px; background: #1f2a3a; color: white; }
+    .subscribe button { padding: 14px 25px; border: none; background: var(--primary-blue); color: white; border-radius: 0 40px 40px 0; font-weight: 600; cursor: pointer; transition: background 0.2s; }
+    .subscribe button:hover { background: var(--accent-yellow); color: #1e2b3c; }
+    .footer-bottom { border-top: 1px solid #253040; padding-top: 30px; text-align: center; color: #6a7c94; }
+    /* ===== 響應式設計 ===== */
+    @media (max-width: 1200px) { .grid-4 { grid-template-columns: repeat(2,1fr); } }
+    @media (max-width: 992px) {
+      .menu-toggle { display: block; order: 3; }
+      .nav-menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 20px 0 20px 20px;
+        background: white;
+        border-top: 1px solid #eaeef2;
+        margin-top: 10px;
+        order: 4;
+      }
+      .nav-menu.active { display: flex; }
+      .nav-menu > a, .nav-menu > .dropdown { width: 100%; }
+      .dropdown > a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        pointer-events: auto;
+      }
+      .dropdown-content {
+        position: static;
+        box-shadow: none;
+        padding-left: 20px;
+        background: transparent;
+        display: none;
+        width: 100%;
+      }
+      .dropdown-content.show { display: block; }
+      .nav-icons { margin-left: auto; margin-right: 15px; }
+      .section { padding: 50px 0; }
+      .section-title { font-size: 2.2rem; margin-bottom: 15px; }
+      .section-subtitle { font-size: 1rem; margin-bottom: 30px; }
+      .grid-2, .grid-3, .grid-4, .steps { grid-template-columns: 1fr !important; gap: 25px !important; }
+      .footer-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 20px !important;
+        margin-bottom: 30px;
+      }
+      .footer-col:first-child { grid-column: 1 / -1; }
+      .footer-col:nth-child(2) { grid-column: 1 / 2; }
+      .footer-col:nth-child(3) { grid-column: 2 / 3; }
+      .footer-col:last-child { grid-column: 1 / -1; }
+      .footer-col h4 { margin-bottom: 15px; }
+      .footer-col p, .footer-col a { line-height: 1.8; font-size: 0.85rem; }
+      .footer { padding: 50px 0 20px; }
+      .container { padding: 0 20px; }
+    }
+    @media (max-width: 480px) {
+      .section-title { font-size: 1.8rem; }
+      .btn { width: 100%; max-width: 280px; }
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <!-- 原有內容 (保留主體，移除多餘樣式) -->
+  <section class="section" style="background-color: #f7f9fc;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="title col-md-12 col-lg-10">
+          <h1 class="section-title text-center"><strong>你必須知道的建築滲漏原因與防水攻略</strong></h1>
+          <h2 class="section-subtitle text-center">城市中的每一座高樓大廈、每一戶溫馨家庭，無不依賴著堅固的建築結構來保護我們免受風雨侵擾。然而，隨著時間的推移和環境的變化，建築物滲漏問題逐漸成為令人頭痛的麻煩。滲漏問題不僅影響居住舒適度，更會對建築結構安全造成威脅。今天，我們來探討建築物滲漏的原因及防水工程的基本知識，讓你在面對滲漏問題時，能夠更加從容應對。</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-12 col-lg-10">
+          <h2 class="section-title"><strong>建築物滲漏的5大常見原因</strong></h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <ul style="font-size: 1.1rem; line-height: 1.8;">
+            <li><strong>1. 施工不當</strong><br>建築物施工過程中如果沒有按照正確的施工方法進行，例如水泥砂漿未攪拌均勻、施工速度過快、未注意施工環境等，都可能會導致防水層施工不牢固，從而導致滲漏。</li>
+            <li><strong>2. 材料老化</strong><br>建築物使用的防水材料隨著時間推移會出現老化現象。例如，防水層龜裂、硬化、變脆、變形等，這些情況都會導致水分滲漏。</li>
+            <li><strong>3. 結構裂縫</strong><br>由於地基沉降、地震等原因，建築物結構可能會出現裂縫，這是滲水的主要來源之一。裂縫一旦形成，雨水等外部水分便會沿著裂縫進入建築物內部。</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <ul style="font-size: 1.1rem; line-height: 1.8;">
+            <li><strong>4. 排水系統故障</strong><br>建築物的排水系統（如屋頂排水管道、地面排水系統）如果出現堵塞、破裂等故障，會導致水分積聚，從而導致滲漏。</li>
+            <li><strong>5. 外部環境因素</strong><br>風、雨等自然因素，以及建築物周圍的植物、動物等，都可能對建築物的防水層造成損壞，從而導致滲漏問題。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid-2">
+        <div>
+          <img src="assets/images/mbr-1036x648.jpg" alt="漏水原因與攻略" style="width:100%; border-radius:30px;">
+          <p class="text-center" style="margin-top:15px; color:#5a6e85;">不同的建築部位都有可能發生滲漏。</p>
+        </div>
+        <div>
+          <h2 class="section-title"><strong>不同的建築部位都有可能發生滲漏，以下是一些常見的漏水位置：</strong></h2>
+          <p style="font-size:1.1rem; line-height:1.8;">屋頂：屋頂瓦片或防水層破損、接縫處漏水。<br>
+窗戶：窗框、窗戶玻璃周圍的密封不良或老化。<br>
+浴室：浴缸、淋浴間、馬桶底座等的防水層破損或施工不當。<br>
+廚房：水槽、水龍頭周圍的密封處、排水管道等位置可能漏水。<br>
+地板：地板縫隙、接縫處、地板下層防水層老化或損壞。<br>
+管道：水管、排水管道接頭處、龍頭、閥門等漏水。<br>
+牆壁：外牆或內牆的破損、接縫處漏水。<br>
+地下室：地下室牆壁或地板的防水層問題、地下水位高導致水滲入。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: #f7f9fc;">
+    <div class="container">
+      <blockquote style="max-width:900px; margin:0 auto; text-align:center;">
+        <h2 class="section-title"><strong>如何處理建築物滲漏問題</strong></h2>
+        <p style="font-size:1.2rem;">在處理滲漏問題時，首先需要找出問題的根源，從而採取相應的防水補救措施。在實施防水補救措施之前，需要對建築物進行詳細的檢測和分析，以確定滲漏的原因和位置，從而採取適當的措施進行修復。</p>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid-2">
+        <div>
+          <img src="assets/images/whatsapp-image-2024-06-21-at-1.42.21-pm-815x543.jpeg" alt="紅外線檢測" style="width:100%; border-radius:30px;">
+          <p class="text-center" style="margin-top:15px; color:#5a6e85;">利用紅外線攝像頭或紅外線熱成像儀器來檢測建築物表面的溫度變化。</p>
+        </div>
+        <div>
+          <h2 class="section-title"><strong>常用的防水專業檢測方法</strong></h2>
+          <p style="font-size:1.1rem; line-height:1.8;"><strong>水壓測試：</strong>通過向防水層施加水壓，觀察是否有漏水現象來檢測防水效果。<br>
+<strong>滲透測試：</strong>使用特定的染色劑或檢測藥劑於防水層表面塗布，觀察是否有染色或檢測劑滲透到防水層下方。<br>
+<strong>紅外線檢測：</strong>利用紅外線攝像頭或紅外線熱成像儀器來檢測建築物表面的溫度變化。<br>
+<strong>電子測漏：</strong>使用電子水壓儀器或電子感應器來檢測防水層下是否有水分存在。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: #f7f9fc;">
+    <div class="container text-center">
+      <h2 class="section-title"><strong>總結</strong></h2>
+      <p style="font-size:1.2rem; max-width:800px; margin:0 auto;">建築物滲漏問題無疑是困擾許多業主和住戶的一大難題。但只要我們了解其原因，選擇合適的檢測方法和防水材料，就能有效地預防和解決滲漏問題。</p>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <!-- 返回頂部 -->
+  <div style="position:fixed; bottom:40px; right:40px; background:var(--primary-blue); color:white; width:50px; height:50px; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow:0 5px 15px rgba(0,102,179,0.3);" onclick="window.scrollTo({top:0,behavior:'smooth'});"><i class="fas fa-arrow-up"></i></div>
+
+  <script>
+    (function() {
+      // FAQ 邏輯 (如果有的話)
+      document.querySelectorAll('.faq-question').forEach(item => {
+        item.addEventListener('click', () => {
+          const faq = item.parentElement;
+          faq.classList.toggle('active');
+          const icon = item.querySelector('i');
+          if (faq.classList.contains('active')) {
+            icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+          } else {
+            icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
+          }
+        });
+      });
+
+      const form = document.querySelector('form');
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          alert('多謝您的查詢！我們會於一個工作天內聯絡您。（示範頁面）');
+          form.reset();
+        });
+      }
+    })();
+
+    // 導航列初始化函數
+    function initNavbar() {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+      if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', function(e) {
+          e.stopPropagation();
+          navMenu.classList.toggle('active');
+          const icon = this.querySelector('i');
+          if (navMenu.classList.contains('active')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+          } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+          }
+        });
+      }
+
+      const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+      dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          const dropdown = this.closest('.dropdown');
+          if (!dropdown) return;
+          const content = dropdown.querySelector('.dropdown-content');
+          if (!content) return;
+          content.classList.toggle('show');
+          const icon = this.querySelector('i');
+          if (icon) {
+            if (content.classList.contains('show')) {
+              icon.classList.remove('fa-chevron-down');
+              icon.classList.add('fa-chevron-up');
+            } else {
+              icon.classList.remove('fa-chevron-up');
+              icon.classList.add('fa-chevron-down');
+            }
+          }
+          if (content.classList.contains('show')) {
+            document.querySelectorAll('.dropdown-content.show').forEach(otherContent => {
+              if (otherContent !== content) {
+                otherContent.classList.remove('show');
+                const otherToggle = otherContent.closest('.dropdown')?.querySelector('.dropdown-toggle i');
+                if (otherToggle) {
+                  otherToggle.classList.remove('fa-chevron-up');
+                  otherToggle.classList.add('fa-chevron-down');
+                }
+              }
+            });
+          }
+        });
+      });
+
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.dropdown')) {
+          document.querySelectorAll('.dropdown-content.show').forEach(content => {
+            content.classList.remove('show');
+            const parentDrop = content.closest('.dropdown');
+            if (parentDrop) {
+              const icon = parentDrop.querySelector('.dropdown-toggle i');
+              if (icon) {
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+              }
+            }
+          });
+        }
+      });
+    }
+
+    // 動態載入導航列
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+        initNavbar(); // 載入後初始化
+      });
+
+    // 動態載入頁腳
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+  </script>
+</body>
+</html>

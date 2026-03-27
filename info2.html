@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>防水檢測技術 · 紅外線熱像分析 & 微波斷層掃描 | 永盛工程行</title>
+  <!-- SEO 關鍵字／描述 -->
+  <meta name="keywords" content="紅外線熱像分析, 微波斷層掃描, 防水檢測技術, 漏水檢測儀器, 香港防水公司, 專業執漏">
+  <meta name="description" content="深入講解紅外線熱像分析與微波斷層掃描的優點、限制及應用場景，助你了解如何用科學儀器找出滲漏源頭。">
+  <!-- Inter 字體 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* 完全複製 index.html 的樣式 (保持一致) */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+      color: #1e2b3c;
+      line-height: 1.5;
+    }
+    .container { max-width: 1400px; margin: 0 auto; padding: 0 40px; }
+
+    :root {
+      --primary-blue: #0066b3;
+      --deep-blue: #002b5c;
+      --accent-yellow: #FFCC1A;
+    }
+
+    /* 導航 */
+    .navbar {
+      background: #ffffff; padding: 20px 0; border-bottom: 1px solid #eaeef2; position: sticky; top: 0; z-index: 100;
+    }
+    .navbar .container { 
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .logo a { display: flex; align-items: center; font-size: 1.8rem; font-weight: 700; color: #1e2b3c; text-decoration: none; }
+    .logo img { height: 52px; margin-right: 12px; }
+    
+    .nav-menu { 
+      display: flex; 
+      gap: 40px; 
+      align-items: center; 
+    }
+    .nav-menu a { 
+      color: #2c3e50; 
+      font-weight: 500; 
+      font-size: 1rem; 
+      text-decoration: none; 
+      transition: color 0.2s; 
+      cursor: pointer;
+    }
+    .nav-menu a:hover { color: var(--primary-blue); }
+    .nav-menu .dropdown { position: relative; }
+    .dropdown-content {
+      display: none; 
+      position: absolute; 
+      top: 100%; 
+      left: 0; 
+      background: white; 
+      box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+      min-width: 200px; 
+      border-radius: 8px; 
+      padding: 8px 0;
+      z-index: 10;
+    }
+    .dropdown-content.show { display: block; }
+    .dropdown-content a { 
+      display: block; 
+      padding: 10px 20px; 
+      font-size: 0.95rem; 
+      color: #1e2b3c; 
+    }
+    .dropdown-content a:hover { background: #f5f7fa; }
+
+    .nav-icons { display: flex; gap: 15px; }
+    .nav-icons a { color: #1e2b3c; font-size: 1.2rem; transition: color 0.2s; }
+    .nav-icons a:hover { color: var(--primary-blue); }
+
+    .menu-toggle { display: none; font-size: 1.8rem; cursor: pointer; color: #1e2b3c; }
+
+    /* 通用章節 */
+    .section { padding: 100px 0; }
+    .section-title { font-size: 2.8rem; font-weight: 600; letter-spacing: -0.02em; color: #1e2b3c; margin-bottom: 20px; }
+    .section-subtitle { font-size: 1.2rem; color: #5a6e85; max-width: 700px; margin-bottom: 60px; }
+    .text-center { text-align: center; }
+
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+    
+    /* 文章圖片樣式 */
+    .article-img {
+      width: 100%;
+      border-radius: 30px;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+    }
+    .img-caption {
+      font-size: 0.95rem;
+      color: #5a6e85;
+      text-align: center;
+      margin-top: 10px;
+      font-style: italic;
+    }
+
+    /* 技術列表樣式 (優點缺點) */
+    .tech-list {
+      margin: 20px 0;
+    }
+    .tech-list strong {
+      color: var(--primary-blue);
+    }
+    .tech-list p {
+      margin-bottom: 10px;
+      color: #1e2b3c;
+    }
+    .divider {
+      width: 80px;
+      height: 4px;
+      background: var(--accent-yellow);
+      margin: 30px 0;
+    }
+
+    /* 引文區塊 */
+    .highlight-quote {
+      background: #f7f9fc;
+      padding: 60px;
+      border-radius: 40px;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 500;
+      border-left: 8px solid var(--primary-blue);
+    }
+
+    /* 地圖＋聯絡區塊 (簡潔版) */
+    .contact-block {
+      background: #f7f9fc;
+      border-radius: 40px;
+      padding: 40px;
+    }
+    .map-container {
+      border-radius: 30px;
+      overflow: hidden;
+      height: 300px;
+    }
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* 頁腳 */
+    .footer {
+      background: #0f1a2a; color: #cbd5e1; padding: 80px 0 30px;
+    }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 50px; margin-bottom: 50px; }
+    .footer-col h4 { font-size: 1.2rem; font-weight: 600; color: white; margin-bottom: 25px; }
+    .footer-col p, .footer-col a { color: #9aa9b9; text-decoration: none; line-height: 2; }
+    .footer-col a:hover { color: white; }
+    .footer-logo { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
+    .footer-logo img { height: 60px; filter: brightness(0) invert(0.8); }
+    .footer-logo span { font-size: 1.8rem; font-weight: 700; color: white; }
+    .subscribe { display: flex; margin-top: 20px; }
+    .subscribe input { flex: 1; padding: 14px; border: none; border-radius: 40px 0 0 40px; background: #1f2a3a; color: white; }
+    .subscribe button { padding: 14px 25px; border: none; background: var(--primary-blue); color: white; border-radius: 0 40px 40px 0; font-weight: 600; cursor: pointer; transition: background 0.2s; }
+    .subscribe button:hover { background: var(--accent-yellow); color: #1e2b3c; }
+    .footer-bottom { border-top: 1px solid #253040; padding-top: 30px; text-align: center; color: #6a7c94; }
+
+    /* 響應式 (完全複製 index 的 media) */
+    @media (max-width: 1200px) { 
+      .grid-4 { grid-template-columns: repeat(2,1fr); } 
+    }
+    @media (max-width: 992px) {
+      .menu-toggle { display: block; order: 3; }
+      .nav-menu { display: none; width: 100%; flex-direction: column; align-items: flex-start; gap: 15px; padding: 20px 0 20px 20px; background: white; border-top: 1px solid #eaeef2; margin-top: 10px; order: 4; }
+      .nav-menu.active { display: flex; }
+      .nav-menu > a, .nav-menu > .dropdown { width: 100%; }
+      .dropdown > a { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+      .dropdown-content { position: static; box-shadow: none; padding-left: 20px; background: transparent; display: none; width: 100%; }
+      .dropdown-content.show { display: block; }
+      .nav-icons { margin-left: auto; margin-right: 15px; }
+      .section { padding: 50px 0; }
+      .section-title { margin-bottom: 15px; font-size: 2.2rem; }
+      .section-subtitle { margin-bottom: 30px; font-size: 1rem; }
+      .grid-2, .grid-3 { grid-template-columns: 1fr !important; gap: 25px !important; }
+      .footer-grid { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 20px !important; margin-bottom: 30px; }
+      .footer-col:first-child { grid-column: 1 / -1; }
+      .footer-col:nth-child(2) { grid-column: 1 / 2; }
+      .footer-col:nth-child(3) { grid-column: 2 / 3; }
+      .footer-col:last-child { grid-column: 1 / -1; }
+      .footer-col h4 { margin-bottom: 15px; }
+      .footer-col p, .footer-col a { line-height: 1.8; }
+      .footer { padding: 50px 0 20px; }
+      .container { padding: 0 20px; }
+      .article-img { margin-bottom: 20px; }
+    }
+    @media (max-width: 480px) {
+      .section-title { font-size: 1.8rem; }
+      .highlight-quote { padding: 30px; font-size: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="navbar-placeholder"></div>
+
+  <!-- 頁面標題區塊 (簡單標題) -->
+  <section class="section" style="padding: 60px 0 20px;">
+    <div class="container text-center">
+      <h1 class="section-title" style="margin-bottom: 10px;">防水檢測技術</h1>
+      <p class="section-subtitle" style="margin: 0 auto;">紅外線熱像分析 · 微波斷層掃描 · 科學定位滲漏</p>
+    </div>
+  </section>
+
+  <!-- 文章內容：紅外線熱像分析 (左圖右文) -->
+  <section class="section">
+    <div class="container">
+      <div class="grid-2">
+        <div>
+          <img src="assets/images/whatsapp-image-2024-06-21-at-2.18.12-pm-702x936.jpeg" alt="紅外線熱像分析" class="article-img" onerror="this.src='https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&auto=format';">
+          <p class="img-caption">永盛工程行師傅正在排查漏水位置</p>
+        </div>
+        <div>
+          <h2 class="section-title" style="font-size: 2.2rem; margin-bottom: 15px;">紅外線熱像分析技術</h2>
+          <div class="divider"></div>
+          <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 15px; color: var(--primary-blue);">原理與應用</h3>
+          <p style="color:#5a6e85; margin-bottom: 25px;">紅外線熱像分析技術是一種非接觸式的測量技術，通過檢測物體表面的熱輻射來生成溫度分佈圖，從而識別建築物的漏水和其他潛在問題。適用於屋頂、牆壁、地板等結構的漏水檢測，能快速找出溫差異常點。</p>
+          
+          <div class="tech-list">
+            <p><strong>✅ 優點：</strong></p>
+            <p>• 非接觸式測量，適合難以接近的區域<br>• 快速生成熱像圖，即時發現問題<br>• 廣泛應用：能效評估、電氣檢測等<br>• 視覺化結果，容易理解<br>• 精度高，可檢測微小溫差</p>
+            <p><strong>⚠️ 限制：</strong></p>
+            <p>• 儀器昂貴，需專業操作及解讀<br>• 受環境溫度、風速、濕度影響<br>• 主要測量表面溫度，內部問題需輔助檢測<br>• 遮蔽物（如裝飾層、傢俬）會影響結果</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 文章內容：微波斷層掃描 (右圖左文) -->
+  <section class="section" style="background: #f7f9fc;">
+    <div class="container">
+      <div class="grid-2">
+        <div>
+          <h2 class="section-title" style="font-size: 2.2rem; margin-bottom: 15px;">微波斷層掃描技術</h2>
+          <div class="divider"></div>
+          <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 15px; color: var(--primary-blue);">原理與應用</h3>
+          <p style="color:#5a6e85; margin-bottom: 25px;">微波斷層掃描（Microwave Tomography）利用微波成像檢測物體內部結構，具備非侵入性、深度穿透的優點，能穿透混凝土、土壤等材料，生成三維圖像，對水分、裂縫、異物高度敏感。</p>
+          
+          <div class="tech-list">
+            <p><strong>✅ 優點：</strong></p>
+            <p>• 非破壞性檢測，無需鑿開結構<br>• 微波穿透力強，可探測深層缺陷<br>• 適用多種材質（混凝土、磚牆等）<br>• 三維成像，精準定位內部問題<br>• 對水分、裂縫敏感度高</p>
+            <p><strong>⚠️ 限制：</strong></p>
+            <p>• 設備昂貴，維護成本高<br>• 數據量大，需複雜算法分析<br>• 受電磁干擾、溫濕度影響<br>• 分辨率較X射線低，細微結構可能遺漏<br>• 需專業訓練人員操作解讀</p>
+          </div>
+        </div>
+        <div>
+          <img src="assets/images/whatsapp-image-2024-06-21-at-1.42.21-pm-815x543.jpeg" alt="微波斷層掃描" class="article-img" onerror="this.src='https://images.unsplash.com/photo-1581094271901-802b6c1c5a1e?w=800&auto=format';">
+          <p class="img-caption">紅外線熱像分析技術</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 重點總結引用 -->
+  <section class="section">
+    <div class="container">
+      <div class="highlight-quote">
+        <i class="fas fa-quote-left" style="color: var(--primary-blue); opacity: 0.3; font-size: 3rem; margin-right: 15px; vertical-align: middle;"></i>
+        選擇適合的檢測技術需要根據具體的檢測需求、預算和現場情況來綜合考慮。
+        <i class="fas fa-quote-right" style="color: var(--primary-blue); opacity: 0.3; font-size: 3rem; margin-left: 15px; vertical-align: middle;"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- 總結段落 -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="grid-2" style="gap: 40px;">
+        <div>
+          <h2 class="section-title" style="font-size: 2rem;">總結</h2>
+          <p style="color:#5a6e85; font-size: 1.2rem; line-height: 1.6;">防水工程中的先進檢測技術為我們提供了更多精確、高效的解決方案。無論是紅外線熱像分析還是微波斷層掃描技術，它們都在建築物的防水檢測中發揮著重要作用。選擇合適的檢測技術，將有助於及時發現問題，避免更大範圍的損失，確保建築物的安全和耐久性。</p>
+        </div>
+        <div>
+          <div style="background: #f7f9fc; padding: 30px; border-radius: 30px;">
+            <h4 style="font-size: 1.4rem; margin-bottom: 15px;">需要專業檢測？</h4>
+            <p style="margin-bottom: 20px;">永盛工程行配備熱成像儀、微波斷層掃描儀，為您精準找出滲漏源頭。</p>
+            <a href="https://api.whatsapp.com/send?phone=85298568540" class="btn btn-primary" style="display: inline-block; padding: 12px 30px;">立即諮詢</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 地圖＋聯絡區塊 (類似 index 的 form-section 風格) -->
+  <section class="form-section" style="background: #f7f9fc; padding: 80px 0;">
+    <div class="container">
+      <div class="form-card" style="background: white; border-radius: 40px; padding: 40px;">
+        <div class="grid-2" style="gap: 40px;">
+          <div class="map-container">
+            <iframe frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBQ55g-IgRRgXrd803PTWDTb7kd6aAitNQ&q=MAI+WAH+IND+BLDG,+KWAI+CHUNG" allowfullscreen></iframe>
+          </div>
+          <div>
+            <h2 class="section-title" style="font-size: 2rem; margin-bottom: 20px;">即時聯絡</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 20px;"><strong>永盛工程行</strong><br>WING SHING ENGINEERING COMPANY</p>
+            <p><i class="fas fa-map-marker-alt" style="color: var(--primary-blue); width: 30px;"></i> UNIT1, 7/F, BLK D, MAI WAH IND BLDG, KWAI CHUNG</p>
+            <p><i class="fas fa-phone-alt" style="color: var(--primary-blue); width: 30px;"></i> <a href="tel:+85298568540" style="color: #1e2b3c; text-decoration: none;">9856 8540</a> ｜ <a href="https://api.whatsapp.com/send?phone=85298568540" style="color: #25D366; text-decoration: none;">WhatsApp</a></p>
+            <p><i class="fas fa-envelope" style="color: var(--primary-blue); width: 30px;"></i> <a href="mailto:wsenghk@gmail.com" style="color: #1e2b3c; text-decoration: none;">wsenghk@gmail.com</a></p>
+            <p><i class="fas fa-globe" style="color: var(--primary-blue); width: 30px;"></i> <a href="https://www.wsenghk.com/" style="color: #1e2b3c; text-decoration: none;">wsenghk.com</a></p>
+            <div style="margin-top: 30px;">
+              <a href="https://api.whatsapp.com/send?phone=85298568540" class="btn btn-primary"><i class="fab fa-whatsapp"></i> 預約免費檢測</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <!-- 返回頂部按鈕 -->
+  <div style="position:fixed; bottom:40px; right:40px; background:var(--primary-blue); color:white; width:50px; height:50px; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow:0 5px 15px rgba(0,102,179,0.3);" onclick="window.scrollTo({top:0,behavior:'smooth'});"><i class="fas fa-arrow-up"></i></div>
+
+  <!-- 腳本：漢堡選單 + 下拉箭頭 (與 index 完全相同) -->
+  <script>
+    // 導航列初始化函數
+    function initNavbar() {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+      if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', function(e) {
+          e.stopPropagation();
+          navMenu.classList.toggle('active');
+          const icon = this.querySelector('i');
+          if (navMenu.classList.contains('active')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+          } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+          }
+        });
+      }
+
+      const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+      dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          const dropdown = this.closest('.dropdown');
+          if (!dropdown) return;
+          const content = dropdown.querySelector('.dropdown-content');
+          if (!content) return;
+          content.classList.toggle('show');
+          const icon = this.querySelector('i');
+          if (icon) {
+            if (content.classList.contains('show')) {
+              icon.classList.remove('fa-chevron-down');
+              icon.classList.add('fa-chevron-up');
+            } else {
+              icon.classList.remove('fa-chevron-up');
+              icon.classList.add('fa-chevron-down');
+            }
+          }
+          if (content.classList.contains('show')) {
+            document.querySelectorAll('.dropdown-content.show').forEach(otherContent => {
+              if (otherContent !== content) {
+                otherContent.classList.remove('show');
+                const otherToggle = otherContent.closest('.dropdown')?.querySelector('.dropdown-toggle i');
+                if (otherToggle) {
+                  otherToggle.classList.remove('fa-chevron-up');
+                  otherToggle.classList.add('fa-chevron-down');
+                }
+              }
+            });
+          }
+        });
+      });
+
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.dropdown')) {
+          document.querySelectorAll('.dropdown-content.show').forEach(content => {
+            content.classList.remove('show');
+            const parentDrop = content.closest('.dropdown');
+            if (parentDrop) {
+              const icon = parentDrop.querySelector('.dropdown-toggle i');
+              if (icon) {
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+              }
+            }
+          });
+        }
+      });
+    }
+
+    // 動態載入導航列
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+        initNavbar(); // 載入後初始化
+      });
+
+    // 動態載入頁腳
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+  </script>
+</body>
+</html>
