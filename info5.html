@@ -10,77 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', sans-serif; background: #ffffff; color: #1e2b3c; line-height: 1.5; }
-    .container { max-width: 1400px; margin: 0 auto; padding: 0 40px; }
-
-    :root { --primary-blue: #0066b3; --deep-blue: #002b5c; --accent-yellow: #FFCC1A; }
-
-    .navbar { background: #ffffff; padding: 20px 0; border-bottom: 1px solid #eaeef2; position: sticky; top: 0; z-index: 100; }
-    .navbar .container { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; }
-    .logo a { display: flex; align-items: center; font-size: 1.8rem; font-weight: 700; color: #1e2b3c; text-decoration: none; }
-    .logo img { height: 52px; margin-right: 12px; }
-    .nav-menu { display: flex; gap: 40px; align-items: center; }
-    .nav-menu a { color: #2c3e50; font-weight: 500; font-size: 1rem; text-decoration: none; transition: color 0.2s; cursor: pointer; }
-    .nav-menu a:hover { color: var(--primary-blue); }
-    .nav-menu .dropdown { position: relative; }
-
-    .dropdown-content { display: none; position: absolute; top: 100%; left: 0; background: white; box-shadow: 0 20px 40px rgba(0,0,0,0.05); min-width: 200px; border-radius: 8px; padding: 8px 0; z-index: 10; }
-    .dropdown-content.show { display: block; }
-    .dropdown-content a { display: block; padding: 10px 20px; font-size: 0.95rem; color: #1e2b3c; }
-    .dropdown-content a:hover { background: #f5f7fa; }
-    @media (min-width: 993px) { .nav-menu .dropdown:hover .dropdown-content { display: block; } }
-
-    .nav-icons { display: flex; gap: 15px; }
-    .nav-icons a { color: #1e2b3c; font-size: 1.2rem; transition: color 0.2s; }
-    .nav-icons a:hover { color: var(--primary-blue); }
-    .menu-toggle { display: none; font-size: 1.8rem; cursor: pointer; color: #1e2b3c; }
-
-    .section { padding: 100px 0; }
-    .section-title { font-size: 2.8rem; font-weight: 600; letter-spacing: -0.02em; color: #1e2b3c; margin-bottom: 20px; }
-    .section-subtitle { font-size: 1.2rem; color: #5a6e85; max-width: 700px; margin: 0 auto 60px; }
-    .text-center { text-align: center; }
-    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-
-    .btn { display: inline-block; padding: 16px 42px; border-radius: 40px; font-weight: 600; font-size: 1.1rem; text-decoration: none; transition: all 0.3s ease; border: none; cursor: pointer; }
-    .btn-primary { background: var(--primary-blue); color: white; }
-    .btn-primary:hover { background: var(--deep-blue); transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0,102,179,0.2); }
-
-    .tech-card { background: white; border-radius: 24px; padding: 40px; box-shadow: 0 15px 30px rgba(0,0,0,0.03); margin-bottom: 30px; border-top: 6px solid var(--primary-blue); transition: 0.3s; }
-    .tech-card:hover { transform: translateY(-6px); box-shadow: 0 30px 60px rgba(0,0,0,0.08); border-color: var(--accent-yellow); }
-    .tech-card h3 { color: var(--primary-blue); margin-bottom: 15px; }
-
-    .footer { background: #0f1a2a; color: #cbd5e1; padding: 80px 0 30px; }
-    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 50px; }
-    .footer-logo { font-size: 1.8rem; font-weight: 700; color: white; margin-bottom: 20px; }
-    .footer-col h4 { color: white; margin-bottom: 25px; font-size: 1.2rem; }
-    .footer-col p { color: #9aa9b9; margin-bottom: 10px; line-height: 1.6; }
-    .footer-col a { color: #9aa9b9; text-decoration: none; line-height: 2; transition: color 0.2s; }
-    .footer-col a:hover { color: white; }
-    .footer-bottom { border-top: 1px solid #253040; padding-top: 30px; margin-top: 50px; text-align: center; color: #6a7c94; }
-
-    .subscribe { display: flex; margin-top: 20px; }
-    .subscribe input { flex: 1; padding: 14px; border: none; border-radius: 40px 0 0 40px; background: #1f2a3a; color: white; outline: none; }
-    .subscribe button { padding: 14px 25px; border: none; background: var(--primary-blue); color: white; border-radius: 0 40px 40px 0; font-weight: 600; cursor: pointer; transition: background 0.2s; }
-    .subscribe button:hover { background: var(--accent-yellow); color: #1e2b3c; }
-
-    @media (max-width: 992px) {
-      .menu-toggle { display: block; order: 3; }
-      .nav-menu { display: none; width: 100%; flex-direction: column; padding: 20px; background: white; position: absolute; top: 100%; left: 0; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-      .nav-menu.active { display: flex; }
-      .nav-menu a { width: 100%; padding: 10px 0; border-bottom: 1px solid #f5f7fa; }
-      .dropdown { width: 100%; }
-      .dropdown-content { position: static; box-shadow: none; padding-left: 20px; width: 100%; }
-      .nav-icons { margin-left: auto; margin-right: 20px; order: 2; }
-      .logo { order: 1; }
-      .grid-2 { grid-template-columns: 1fr !important; gap: 30px; }
-      .section { padding: 60px 0; }
-      .footer-grid { grid-template-columns: 1fr 1fr; gap: 30px; }
-      .footer-col:first-child, .footer-col:last-child { grid-column: span 2; }
-    }
-  </style>
-</head>
+  <link rel="stylesheet" href="assets/css/style.css">
+  </head>
 <body>
   <div id="navbar-placeholder"></div>
 
