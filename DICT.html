@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>默書小助手</title>
+    <style>
+        *{box-sizing:border-box;font-family:Arial, sans-serif;}
+        body{background:#f5f5f5;padding:20px;max-width:500px;margin:0 auto;}
+        .title{text-align:center;font-size:26px;margin:20px 0;}
+        .lang{display:flex;justify-content:center;gap:15px;margin-bottom:20px;}
+        button{padding:12px 20px;border:none;border-radius:10px;font-size:16px;cursor:pointer;}
+        .lang-btn{width:100px;background:#eee;}
+        .lang-btn.active{background:#4CAF50;color:white;}
+        .setting{
+            display:flex;justify-content:center;align-items:center;gap:10px;
+            margin-bottom:15px;
+        }
+        select, input[type="range"]{
+            padding:10px;font-size:16px;text-align:center;
+            border:1px solid #ccc;border-radius:8px;
+        }
+        textarea{
+            width:100%;height:140px;padding:15px;
+            border-radius:10px;border:1px solid #ccc;
+            font-size:16px;margin-bottom:15px;
+        }
+        .big-btn{
+            width:100%;background:#2196F3;color:white;margin:10px 0;
+        }
+        .ctrl{
+            display:flex;gap:10px;margin-top:10px;
+        }
+        .ctrl button{
+            flex:1;background:#FF5722;color:white;
+        }
+        .ctrl button.next{
+            background:#4CAF50;
+        }
+        .ctrl button.prev{
+            background:#607D8B;
+        }
+        .full-play{
+            background:#9C27B0 !important;
+            margin-top:10px;
+        }
+        .hidden{
+            display:none !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">📖 默書小助手</div>
+
+    <div class="lang">
+        <button class="lang-btn active" onclick="setLang('zh')">中文</button>
+        <button class="lang-btn" onclick="setLang('en')">English</button>
+    </div>
+
+    <div class="setting">
+        朗讀音色：
+        <select id="voice">
+            <option value="zh-CN">普通話</option>
+            <option value="zh-HK">粵語</option>
+            <option value="en-US">美式英文</option>
+            <option value="en-GB">英式英文</option>
+        </select>
+    </div>
+
+    <div class="setting">
+        朗讀速度：
+        <input type="range" id="rate" min="0.3" max="1.0" step="0.1" value="0.9">
+    </div>
+
+    <textarea id="text" placeholder="請輸入默書內容，詞語之間用空格分開"></textarea>
+    <button class="big-btn" onclick="startDictation()">開始默書</button>
+
+    <div class="ctrl" id="control" style="display:none">
+        <button class="prev" onclick="prevLine()">⬅️ 上一句</button>
+        <button onclick="playCurrent()">🔁 再播一次</button>
+        <button class="next" onclick="nextLine()">➡️ 下一句</button>
+    </div>
+
+    <button class="big-btn full-play" id="fullPlay" style="display:none" onclick="playFull()">📢 全文讀一次</button>
+
+    <script>
+        let lang = 'zh';
+        let groups = [];
+        let index = 0;
+
+        function setLang(l) {
+            lang = l;
+            document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+
+        // 標點替換：中文讀中文，英文讀英文
+        function replacePunct(text) {
+            if (lang === 'zh') {
+                return text
+                    .replace(/@@，/g, "逗號")
+                  
+            } else {
+                return text
+                    .replace(/@@,/g, "comma")
+           
+            }
+        }
+
+        // 開始默書
+        function startDictation() {
+            const text = document.getElementById('text').value.trim();
+            const words = text.split(/\s+/).filter(w => w.length > 0);
+
+            groups = [];
+            for (let i = 0; i < words.length; i += 5) {
+                let part = words.slice(i, i+5).join(' ');
+                groups.push(part);
+            }
+
+            document.getElementById('text').classList.add('hidden');
+            event.target.classList.add('hidden');
+
+            document.getElementById('control').style.display = 'flex';
+            document.getElementById('fullPlay').style.display = 'block';
+
+            index = 0;
+            playCurrent();
+        }
+
+        function playCurrent() {
+            if (index < 0) index = 0;
+            if (index >= groups.length) {
+                alert('✅ 默書完成！');
+                location.reload();
+                return;
+            }
+            let content = replacePunct(groups[index]);
+            speak(content);
+        }
+
+        // 上一句
+        function prevLine() {
+            window.speechSynthesis.cancel();
+            index--;
+            playCurrent();
+        }
+
+        // 下一句
+        function nextLine() {
+            window.speechSynthesis.cancel();
+            index++;
+            playCurrent();
+        }
+
+        // 全文朗讀
+        async function playFull() {
+            window.speechSynthesis.cancel();
+            for (let line of groups) {
+                let content = replacePunct(line);
+                await speakAsync(content);
+            }
+        }
+
+        // 異步朗讀
+        function speakAsync(text) {
+            return new Promise(resolve => {
+                window.speechSynthesis.cancel();
+                const u = new SpeechSynthesisUtterance(text);
+                u.lang = document.getElementById('voice').value;
+                u.rate = parseFloat(document.getElementById('rate').value);
+                u.onend = resolve;
+                window.speechSynthesis.speak(u);
+            });
+        }
+
+        function speak(text) {
+            window.speechSynthesis.cancel();
+            const u = new SpeechSynthesisUtterance(text);
+            u.lang = document.getElementById('voice').value;
+            u.rate = parseFloat(document.getElementById('rate').value);
+            window.speechSynthesis.speak(u);
+        }
+
+        function sleep(ms) {
+            return new Promise(r => setTimeout(r, ms));
+        }
+    </script>
+</body>
+</html>
